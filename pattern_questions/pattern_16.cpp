@@ -18,7 +18,8 @@ int main()
         int col = 1;
         while (col <= row)
         {
-            char ch = 'A' + 4 - row;
+            //char ch = 'A' + 4 - row;
+            char ch = 'A' + n - row;
             cout << ch << " ";
             col++;
         }
