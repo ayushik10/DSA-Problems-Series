@@ -10,7 +10,10 @@ using namespace std;
 
 int main()
 {
-    int n = 4;
+    int n;
+    cout << " Enter a number : ";
+    cin >> n;
+    
     int row = 1;
 
     while (row <= n)
