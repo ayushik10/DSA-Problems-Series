@@ -9,7 +9,10 @@ using namespace std;
 
 int main()
 {
-    int n = 3;
+    int n;
+    cout << " Enter a number : ";
+    cin >> n;
+    
     int row = 1;
     char ch = 'A';
 
