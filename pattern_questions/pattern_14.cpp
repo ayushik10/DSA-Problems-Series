@@ -2,7 +2,8 @@
      A 
      B C
      D E F
-     G H I J*/
+     G H I J 
+               */
 
 #include<iostream>
 using namespace std;
