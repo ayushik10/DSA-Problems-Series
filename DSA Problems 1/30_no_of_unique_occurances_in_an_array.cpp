@@ -1,27 +1,36 @@
-// To check the number of unique occurances in an array
+// To check the number of unique occurances in an array.
 
 #include<iostream>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
-void printArray( int arr[] , int n )
+bool uniqueOccurance( int arr[] , int n )
 {
-    for ( int i = 0; i < n ; i++ ){
-        cout<<arr[i]<<" ";
-    }
-}
-int uniqueOccurance( int arr[] , int n )
-{
-    int x;
-    int count = 0;
-    int unique = 0;
-    for ( int i = 0; i < n; i++ ){
-     unique = unique ^ arr[i];
-    x = unique;
+    vector <int> occurance;
+
+    sort ( arr , arr+n );
+
+    for ( int i = 0; i < n;  ){
+        int temp = arr[i];
+        int count = 0;
     
-    count = count + 1;
+    while ( i < n && arr[i] == temp ){
+        count ++;
+        i++;
     }
-      return count ;
+    occurance.push_back(count);
+    }
+    sort ( occurance.begin() , occurance.end() );
+
+    for ( int i = 0; i < occurance.size()-1; i++ ){
+        if ( occurance[i] == occurance[i+1])
+        return false;
+    }
+    return true;
+
 }
+
 int main()
 {
     int arr[100], n;
@@ -34,6 +43,13 @@ int main()
         cin >> arr[i];
     }
 
-    cout << "The number of  unique element in the given array is : " << uniqueOccurance(arr, n)<<endl;
+   if ( uniqueOccurance( arr, n ) )
+   {
+    cout << "Unique Occurance exists !!";
+   }
+   else {
+    cout << "Unique Occurance does not exists !!";
+   }
+    
     return 0;
 }
