@@ -8,7 +8,7 @@ int  main()
     cout <<"Enter a number : ";
     cin >>n;
 
- for ( int i = 1 ; i <= n ; i ++){
+ for ( int i = 1 ; i <= 31 ; i ++){
     int power = pow ( 2 , i);
 
     if (  power == n){
