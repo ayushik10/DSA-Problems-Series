@@ -5,7 +5,12 @@ int Fibonacci(int n)
 {
     int first = 0, second = 1;
     int temp;
-
+     
+    if ( n <= 2 )
+    {
+        return n-1;
+    }
+    
     for (int i = 3 ; i <= n; i++)
     {
         temp = first + second ;
