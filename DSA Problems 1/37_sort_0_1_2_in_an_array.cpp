@@ -9,6 +9,7 @@ void printArray( int arr[] , int size )
         cout << arr[i] << " ";
     }
 }
+
 void sort012s ( int arr [], int size)
 { 
   int start = 0 ;
@@ -30,6 +31,7 @@ void sort012s ( int arr [], int size)
     }
    }
  }
+
  int main ()
  {
     int arr[100] , size ;
