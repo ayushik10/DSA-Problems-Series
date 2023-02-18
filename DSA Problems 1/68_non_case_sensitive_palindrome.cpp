@@ -27,9 +27,9 @@ bool checkPalindrome (string str)
 
     while (s <= e)
     {
-        if (specialCharacters(str[s]))
+        while (specialCharacters(str[s]))
         s++;
-        if(specialCharacters(str[e]))
+        while(specialCharacters(str[e]))
         e--;
 
         if (toLowerCase(str[s]) != toLowerCase(str[e]))
