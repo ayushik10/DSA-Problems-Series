@@ -1,7 +1,6 @@
-//To check whether a string is (non-case sensitive) palindrome or not (I).
+//To check whether a string is (non-case sensitive) palindrome or not(I).
 
-#include <iostream>
-using namespace std;
+#include <bits/stdc++.h> 
 
 bool specialCharacters (char ch)
 {
@@ -19,20 +18,21 @@ char toLowerCase (char ch)
     {
    char temp = ch - 'A' + 'a';
    return temp;
-}}
+}
+}
 bool checkPalindrome (string str)
 {
     int s = 0;
     int e = str.length()-1;
 
-    while (s <= e)
+    while (s < e)
     {
-        while (specialCharacters(str[s]))
+        while (s<e && (specialCharacters(str[s])))
         s++;
-        while(specialCharacters(str[e]))
+        while(s<e && (specialCharacters(str[e])))
         e--;
 
-        if (toLowerCase(str[s]) != toLowerCase(str[e]))
+        if ((toLowerCase(str[s])) != (toLowerCase(str[e])))
         return false;
         
         else
@@ -43,18 +43,4 @@ bool checkPalindrome (string str)
     }
      return true;
 }
-int main ()
-{
-    string str;
 
-    cout << "Enter a string : ";
-    cin >> str;
-    
-    if (checkPalindrome(str))
-    cout << "Palindrome";
-
-    else 
-    cout << "Not Palindrome";
-
-    return 0;
-}
