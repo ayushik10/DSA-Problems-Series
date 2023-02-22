@@ -41,5 +41,5 @@ int main ()
    cout << endl;
    
    cout << "Empty or not : " << mini.empty() << endl;
-   
+   return 0;
 }
