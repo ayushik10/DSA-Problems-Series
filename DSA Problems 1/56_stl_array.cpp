@@ -26,4 +26,6 @@ int main ()
     cout << "First Element -> " << a.front() << endl;
 
     cout << "Last Element -> " << a.back() << endl;
+    
+    return 0;
 }
