@@ -9,9 +9,9 @@ int main ()
 {
     map <int,string> m;
 
-    m[1]= "babbar";
-    m[2]= "love";
-    m[13]= "kumar";
+    m[1]= "singh";
+    m[2]= "ayushi";
+    m[13]= "kumari";
 
     m.insert({5, "bheem"});
 
@@ -43,4 +43,5 @@ int main ()
     {
         cout << (*i).first << endl;
     }
+    return 0;
 }
