@@ -55,5 +55,6 @@ int main ()
     cout << "Before clear size -> " << v.size() << endl;
     v.clear();
     cout << "After clear size -> " << v.size() << endl;
-
+    
+    return 0;
 }
