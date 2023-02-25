@@ -3,9 +3,10 @@
 #include <iostream>
 using namespace std;
 
-int search ( int arr[] , int size , int s , int e , int key )
+int search ( int arr[] , int size  , int key )
 {
-    
+    int s = 0;
+    int e = size -1;
     int mid = ( s+e)/2;
 
     while ( s <= e ){
@@ -23,7 +24,7 @@ int search ( int arr[] , int size , int s , int e , int key )
 }
 int main ()
 {
-    int arr[100] , size , s , e , key;
+    int arr[100] , size , key;
 
     cout << "Enter the size of array : ";
     cin >> size;
@@ -32,15 +33,9 @@ int main ()
     for ( int i = 0; i < size; i++ )
     cin >> arr[i];
 
-    cout << " Enter the start element of array : ";
-    cin >> s;
-
-    cout << " Enter the end element of array : ";
-    cin >> e;
-
     cout << "Enter the element to search for : ";
     cin >> key;
     
-    cout << search ( arr , size , s , e , key );
+    cout << search ( arr , size , key );
     return 0;
 }
