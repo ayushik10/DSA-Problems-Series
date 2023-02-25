@@ -3,25 +3,55 @@
 #include <iostream>
 using namespace std;
 
-int search ( int arr[] , int size  , int key )
-{
+ int pivot ( vector<int>& nums )
+    {
     int s = 0;
-    int e = size -1;
-    int mid = ( s+e)/2;
+    int e = nums.size()-1;
+    int mid = (s+e)/2;
 
-    while ( s <= e ){
+    while ( s<e ){
+    if ( nums[mid] >= nums[0] ){
+        s = mid+1;
+    }
+    else 
+    e = mid - 1;
+    mid = (s+e)/2;
+    }
+    return s;
+    }
+    int searchElement(vector<int>& nums,int s, int e, int target) {
 
-        if ( arr[mid] == key )
+        while ( s <= e ){
+        int mid = (s+e)/2;
+
+        if ( nums[mid] == target){
         return mid ;
+        }
 
-        else if ( arr[mid] > key)
+        else if ( nums[mid] > target){
         e = mid -1;
+        }
 
-        else
+        else{
         s = mid +1;
+        }
     }
     return -1;
+    
+    }
+    int search(vector<int>& nums , int target){
+        int piv = pivot(nums);
+        int n = nums.size();
+
+        if (target >= nums[0] && target < nums[piv]){
+        return searchElement (nums , 0, piv-1, target);
+    }
+    else
+    {
+    return searchElement(nums ,piv, n-1 , target );
 }
+}
+/*
 int main ()
 {
     int arr[100] , size , key;
@@ -38,4 +68,4 @@ int main ()
     
     cout << search ( arr , size , key );
     return 0;
-}
+}*/
