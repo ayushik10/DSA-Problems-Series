@@ -19,7 +19,7 @@ using namespace std;
     }
     return s;
     }
-    int searchElement(vector<int>& nums,int s, int e, int target) {
+ int searchElement(vector<int>& nums,int s, int e, int target) {
 
         while ( s <= e ){
         int mid = (s+e)/2;
@@ -35,37 +35,41 @@ using namespace std;
         else{
         s = mid +1;
         }
-    }
+      }
     return -1;
     
-    }
-    int search(vector<int>& nums , int target){
-        int piv = pivot(nums);
-        int n = nums.size();
+  }
+ int search(vector<int>& nums , int target){
+    int piv = pivot(nums);
+    int n = nums.size();
 
-        if (target >= nums[0] && target < nums[piv]){
+    if (target >= nums[0] && target < nums[piv]){
         return searchElement (nums , 0, piv-1, target);
     }
     else
     {
     return searchElement(nums ,piv, n-1 , target );
+     }
 }
-}
-/*
+
 int main ()
 {
-    int arr[100] , size , key;
+   vector<int> arr , size , key;
 
     cout << "Enter the size of array : ";
     cin >> size;
 
     cout << "Enter the elements of the array : ";
     for ( int i = 0; i < size; i++ )
-    cin >> arr[i];
+    {
+     int temp;
+     cin >> temp;
+     arr.push_back(temp);
+    }
 
     cout << "Enter the element to search for : ";
     cin >> key;
     
-    cout << search ( arr , size , key );
+    cout << search ( arr , key);
     return 0;
-}*/
+
