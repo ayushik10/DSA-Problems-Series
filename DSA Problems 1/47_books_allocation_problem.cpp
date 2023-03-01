@@ -25,11 +25,15 @@ bool check(int arr[] , int n , int mid , int key)
     else
     return false;
 }
+
 int getMin(int arr[] , int n)
 {
-    int min =0;
-   for (int i = 0; i < n; i++){
-    if (arr[i] < arr[i+1])
+    int i = 0;
+    int min = arr[i];
+
+   for (; i < n ; i++){
+
+    if (arr[i] < min)
     min = arr[i];
    }
    return min;
@@ -37,6 +41,7 @@ int getMin(int arr[] , int n)
 
 int getSum(int arr[] , int n)
 {
+
     int sum = 0;
    for (int i = 0; i < n; i++){
     sum = sum + arr[i];
