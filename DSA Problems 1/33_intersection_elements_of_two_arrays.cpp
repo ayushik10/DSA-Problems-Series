@@ -21,6 +21,8 @@ void intersection (int arr[] , int brr[], int n , int m)
                if ( arr[i] == brr[j] )
                {
                 cout << arr[i] << " " ;
+                   brr[j] = -1;
+                   break;
             }
         }
     }
