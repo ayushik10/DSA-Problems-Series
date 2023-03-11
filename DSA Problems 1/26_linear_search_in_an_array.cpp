@@ -3,14 +3,14 @@
 #include <iostream>
 using namespace std;
 
-int linearSearch(int arr[], int size, int key)
+void linearSearch(int arr[], int size, int key)
 {
     for (int i = 0; i < size; i++)
     {
         if (arr[i] == key)
         {
             cout << "Element found at index position : " << i << endl;
-            return 0;
+//             return 0;
         }
     }
     cout << "Element is not present in the array" << endl;
