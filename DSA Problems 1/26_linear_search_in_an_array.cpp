@@ -10,7 +10,7 @@ void linearSearch(int arr[], int size, int key)
         if (arr[i] == key)
         {
             cout << "Element found at index position : " << i << endl;
-//             return 0;
+            return;
         }
     }
     cout << "Element is not present in the array" << endl;
