@@ -14,7 +14,7 @@ bool checkPalindrome (char ch[] , int n)
         if (ch[s] != ch[e])
         {
             return false ;
-            break;
+//             break;
            }
          else {
               s++ ;
