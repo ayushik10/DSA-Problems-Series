@@ -12,6 +12,10 @@ void duplicates ( int arr[] , int n )
     {
         if ( arr[i]==arr[i+1] )
         {
+           while(arr[i]==arr[i+1])
+           {
+            i++;
+            }
             cout << arr[i] <<" ";
             i++;
         }
