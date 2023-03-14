@@ -10,7 +10,7 @@ using namespace std ;
 
 } */
 
-int binarySearch ( int arr [] , int size , int key )
+void binarySearch ( int arr [] , int size , int key )
 {
     int start = 0; 
     int end = size - 1;
@@ -20,7 +20,7 @@ int binarySearch ( int arr [] , int size , int key )
         if ( arr[mid] == key)
         {
             cout <<  "The element is found at postion " << mid + 1 << endl;
-            return 0;
+            return ;
         }
         else if ( key < arr[mid] )
         {
@@ -30,7 +30,7 @@ int binarySearch ( int arr [] , int size , int key )
         start = mid + 1;
     }
     cout << " The element is not present in the array . " << endl;
-    return 0;
+    //return 0;
 }
 
 int main ()
