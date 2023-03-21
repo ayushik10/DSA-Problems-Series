@@ -41,7 +41,12 @@ int main ()
   
    n = getLength(ch);
 
-   cout << "Palindrome or not : " << checkPalindrome (ch , n);
-
+   if(checkPalindrome (ch , n)){
+    cout << "Palindrome" << endl;
+   }
+   else{
+    cout << "Not Palindrome" << endl;
+   }
+    
    return 0;
 }

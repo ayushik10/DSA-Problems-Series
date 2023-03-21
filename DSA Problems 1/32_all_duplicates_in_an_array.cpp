@@ -13,6 +13,10 @@ void duplicates ( int arr[] , int n )
        int temp = arr[i];
         if ( arr[i]==arr[i+1] )
         {
+           while(arr[i]==arr[i+1])
+           {
+            i++;
+            }
             cout << arr[i] <<" ";
             while(i<n-1 && arr[i+1]==temp) {
                i++;

@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-void rowSum (int arr[][3] , int row , int col)
+void rowSum (int arr[][3])
 {
     for (int row = 0; row < 3; row++){
         int sum = 0;
@@ -28,6 +28,6 @@ int main ()
     }
 
     cout << "Row wise sum : " << endl;
-    rowSum (arr, 3, 3);
+    rowSum (arr);
     return 0;
 }
