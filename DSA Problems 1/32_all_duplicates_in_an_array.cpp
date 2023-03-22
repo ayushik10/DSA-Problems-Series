@@ -10,6 +10,7 @@ void duplicates ( int arr[] , int n )
 
     for( int i = 0; i < n-1;i++)
     {
+       int temp = arr[i];
         if ( arr[i]==arr[i+1] )
         {
            while(arr[i]==arr[i+1])
@@ -17,8 +18,11 @@ void duplicates ( int arr[] , int n )
             i++;
             }
             cout << arr[i] <<" ";
-            i++;
+            while(i<n-1 && arr[i+1]==temp) {
+               i++;
+            }
         }
+       
     }
  }
  int main()
