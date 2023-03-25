@@ -48,8 +48,8 @@ int main()
     for ( int j = 0; j <m; j++ ){
         cin >> brr[j];
     }
-    cout << "Intersection elements in the given arrays : " << endl;
-     intersection ( arr , brr, n , m );
+    cout << "Intersection elements in the given arrays : ";
+    intersection ( arr , brr, n , m );
     
        return 0;
 }
