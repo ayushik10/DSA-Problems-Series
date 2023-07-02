@@ -112,7 +112,7 @@ void postorder(Node* root)
 
 //build from level order
 
-void buildlevel(Node* root)
+void buildlevel(Node* &root)
 {
     queue<Node*> q;
     int data;
